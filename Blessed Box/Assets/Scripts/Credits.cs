@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 
-public class Credits : MonoBehaviour
-{
+public class Credits : MonoBehaviour {
 
-    public void Quit()
-    {
-        Debug.Log("Quit");
+    /// <summary>
+    /// Quit the application.
+    /// </summary>
+    public void Quit(
+
+    ) {
         Application.Quit();
     }
 

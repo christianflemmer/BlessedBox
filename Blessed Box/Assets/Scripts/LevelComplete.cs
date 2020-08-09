@@ -1,12 +1,14 @@
-﻿
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelComplete : MonoBehaviour
-{
+public class LevelComplete : MonoBehaviour {
 
-    public void LoadNextLevel()
-    {
+    /// <summary>
+    /// Load next level based on current active scene.
+    /// </summary>
+    public void LoadNextLevel(
+
+    ) {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

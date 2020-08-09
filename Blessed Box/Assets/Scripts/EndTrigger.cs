@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 
-public class EndTrigger : MonoBehaviour
-{
+public class EndTrigger : MonoBehaviour {
 
     public GameManager gameManager;
 
-    private void OnTriggerEnter()
-    {
+    /// <summary>
+    /// Handle event of trigger enter.
+    /// </summary>
+    private void OnTriggerEnter(
+
+    ) {
         gameManager.CompleteLevel();
     }
 }

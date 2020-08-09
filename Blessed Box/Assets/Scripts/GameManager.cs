@@ -1,30 +1,53 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
-{
+public enum EEndGameType {
+    COLLISSION,
+    FALL_OFF_EDGE,
+}
+
+public class GameManager : MonoBehaviour {
 
     public float restartDelay = 1f;
     public GameObject completeLevelUi;
 
-    private bool gameHasEnded = false;
+    private bool levelHasEnded = false;
 
-    public void CompleteLevel()
-    {
+    /// <summary>
+    /// Complete current level.
+    /// </summary>
+    public void CompleteLevel(
+
+    ) {
         completeLevelUi.SetActive(true);
     }
 
-    public void EndGame()
-    {
-        if (gameHasEnded == false)
-        {
-            gameHasEnded = true;
-            Invoke("Restart", restartDelay);
+    /// <summary>
+    /// End level based on given enum `EEndGameType`.
+    /// </summary>
+    public void EndLevel(
+        EEndGameType endGameType
+    ) {
+        if (levelHasEnded == false) {
+            levelHasEnded = true;
+
+            switch (endGameType) {
+                case EEndGameType.COLLISSION:
+                    Invoke("RestartLevel", restartDelay);
+                    break;
+
+                case EEndGameType.FALL_OFF_EDGE:
+                    RestartLevel();
+                    break;
+            }
+
         }
     }
 
-    private void Restart()
-    {
+    /// <summary>
+    /// Restart current level.
+    /// </summary>
+    private void RestartLevel() {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
