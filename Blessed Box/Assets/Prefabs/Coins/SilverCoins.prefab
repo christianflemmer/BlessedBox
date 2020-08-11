@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6104422604126738271}
   - component: {fileID: 3353359469524634281}
   m_Layer: 0
-  m_Name: SilverCoins (2)
+  m_Name: SilverCoins
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c08c1c7f604cd3e4da323c0abd64b6a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 5
+  amount: 0
 --- !u!1 &7760245885376597769
 GameObject:
   m_ObjectHideFlags: 0
