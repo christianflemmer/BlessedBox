@@ -6,11 +6,11 @@ public class Score : MonoBehaviour {
     public Transform player;
     public Text score;
 
-    public float animationTime = 0.1f;
+    public float animationTime = 1.5f;
 
-    private float desiredCoins;
-    private float initialCoins;
-    private float currentCoins;
+    private float desiredCoins = 0f;
+    private float initialCoins = 0f;
+    private float currentCoins = 0f;
 
     private void Start(
 
