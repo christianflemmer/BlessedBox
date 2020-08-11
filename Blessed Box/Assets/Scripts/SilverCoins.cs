@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 
-public class GoldCoins : MonoBehaviour {
+public class SilverCoins : MonoBehaviour {
 
-    public float amount = 10f;
+    public float amount = 5f;
 
     private Score score;
 
