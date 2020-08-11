@@ -2,9 +2,8 @@
 
 public class GoldCoins : MonoBehaviour {
 
-    public float amount = 10f;
-
     private Score score;
+    private float amount = 100f;
 
     private void Start(
 

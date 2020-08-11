@@ -2,9 +2,8 @@
 
 public class SilverCoins : MonoBehaviour {
 
-    public float amount = 5f;
-
     private Score score;
+    private float amount = 50f;
 
     private void Start(
 

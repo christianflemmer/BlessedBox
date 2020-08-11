@@ -2,9 +2,8 @@
 
 public class CopperCoins : MonoBehaviour {
 
-    public float amount = 2f;
-
     private Score score;
+    private float amount = 25f;
 
     private void Start(
 
